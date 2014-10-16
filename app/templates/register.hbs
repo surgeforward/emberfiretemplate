@@ -1,0 +1,13 @@
+<form id="frmRegister" role="form">
+ <h2>Register</h2>
+    {{form-errors errors=errors}}
+ <div class="form-group">
+    <label for="txtRegEmail">Email address</label>
+    {{input value=email type="email" class="form-control" id="txtRegEmail" placeholder="Enter email" name="txtRegEmail"}}
+</div>
+<div class="form-group">
+    <label for="txtRegPass">Password</label>
+    {{input type='password' value=password class="form-control" id="txtRegPass" placeholder="Password" name="txtRegPass"}}
+</div>
+<button type="submit" class="btn btn-default" {{action "register"}} >Register</button>
+</form>

@@ -29,4 +29,13 @@ This is a template to get you started with ember and firebase quickly.
 
 * `ember build`
 
+## Deploying
+
+* `npm install -g firebase-tools`
+* ember init
+  * choose app to deploy to
+  * type `dist` for your public folder
+* firebase deploy
+* firebase open (to see it in the browser)
+
 For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).

@@ -1,0 +1,10 @@
+<h2>Home</h2>
+
+<ul>
+  {{#each project in projects}}
+    <li>
+      {{#link-to 'project.show' project.id}}{{project.name}}{{/link-to}}
+    </li>
+  {{/each}}
+
+</ul>

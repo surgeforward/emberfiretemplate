@@ -9,6 +9,7 @@ Router.map(function() {
   this.resource('project',function(){
     this.route('new');
     this.route('show', {path:'show/:project_id'});
+    this.route('edit', {path:'edit/:project_id'});
   });
   this.resource('user',function(){
     this.route('show', {path:'show/:user_id'});

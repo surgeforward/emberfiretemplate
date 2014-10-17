@@ -2,6 +2,6 @@
 
 <ul>
   {{#each item in model}}
-    <li>{{item.name}} <button class='btn btn-danger btn-xs' {{action "deleteProject" item}}>delete</button> </li>
+    <li>{{#link-to 'project.show' item}}{{item.name}}{{/link-to}} <button class='btn btn-danger btn-xs' {{action "deleteProject" item}}>delete</button> </li>
   {{/each}}
 </ul>

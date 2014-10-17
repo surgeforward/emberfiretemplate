@@ -6,4 +6,5 @@
  ✔ fix issues with signup then login not working correctly @done (14-10-17 12:33)
  ✔ delete project @done (14-10-17 12:42)
  ☐ update project
+ ☐ projects page breaks if refrential integrity is broken i.e. users.projects array has an id to a non existing project record
  ☐ invite others to use project (only owner can edit or delete project, others can view it)

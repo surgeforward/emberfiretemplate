@@ -15,6 +15,29 @@ This is a template to get you started with ember and firebase quickly.
 * `npm install`
 * `bower install`
 
+## Rules
+Here are the rules that you need to set in your firebase application.  To learn more about rules see [https://www.firebase.com/docs/security/](https://www.firebase.com/docs/security/)
+
+```
+{
+  "rules": {
+    "users": {
+      "$user":{
+        ".read": "$user === auth.uid",
+        ".write": "$user === auth.uid"
+      }
+    },
+    "projects": {
+      ".read" : "auth.uid !=null",
+      "$project":{
+        ".read": "data.child('user').val() === auth.uid",
+        ".write": "newData.child('user').val() === auth.uid"
+      }
+    }
+  }
+}
+```
+
 ## Running
 
 * `ember server`
@@ -32,10 +55,10 @@ This is a template to get you started with ember and firebase quickly.
 ## Deploying
 
 * `npm install -g firebase-tools`
-* ember init
+* `ember init`
   * choose app to deploy to
   * type `dist` for your public folder
-* firebase deploy
-* firebase open (to see it in the browser)
+* `firebase deploy`
+* `firebase open` (to see it in the browser)
 
 For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).

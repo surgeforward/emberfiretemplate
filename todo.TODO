@@ -1,6 +1,7 @@
- ☐ open source project
-   ☐ test on blank VM
-   ☐ readme explaining installation process
-   ☐ deployment process
+ ✔ open source project @done (14-10-17 10:11)
+   ✔ test on blank VM @done (14-10-17 10:10)
+   ✔ readme explaining installation process @done (14-10-17 10:10)
+   ✔ deployment process @done (14-10-17 10:11)
+   ☐ document rules in firebase
  ☐ fix issues with signup then login not working correctly
- ☐ invite others to use project (only owner can edit or delete projec, others can view it)
+ ☐ invite others to use project (only owner can edit or delete project, others can view it)

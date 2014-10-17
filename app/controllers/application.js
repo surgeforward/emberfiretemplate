@@ -10,6 +10,9 @@ export default Ember.Controller.extend({
       if (authData) {
         console.log("User ID: " + authData.uid + ", Provider: " + authData.provider);
         self.set('isLoggedIn',true);
+        if(authData.password.isTemporaryPassword){
+          self.transitionToRoute('changePassword');
+        }
       } else {
         self.set('isLoggedIn',false);
         self.set('currentUser',null);

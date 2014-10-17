@@ -5,8 +5,9 @@
    ✔ document rules in firebase @done (14-10-17 12:33)
  ✔ fix issues with signup then login not working correctly @done (14-10-17 12:33)
  ✔ delete project @done (14-10-17 12:42)
- ☐ update project
- ☐ password reset
- ☐ forgot password
+ ✔ update project @done (14-10-17 13:18)
+ ✔ forgot password @done (14-10-17 13:31)
+ ☐ change password
+ ☐ redirect to password change if password is temporary
  ☐ projects page breaks if refrential integrity is broken i.e. users.projects array has an id to a non existing project record
  ☐ invite others to use project (only owner can edit or delete project, others can view it)

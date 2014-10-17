@@ -2,6 +2,8 @@
    ✔ test on blank VM @done (14-10-17 10:10)
    ✔ readme explaining installation process @done (14-10-17 10:10)
    ✔ deployment process @done (14-10-17 10:11)
-   ☐ document rules in firebase
- ☐ fix issues with signup then login not working correctly
+   ✔ document rules in firebase @done (14-10-17 12:33)
+ ✔ fix issues with signup then login not working correctly @done (14-10-17 12:33)
+ ✔ delete project @done (14-10-17 12:42)
+ ☐ update project
  ☐ invite others to use project (only owner can edit or delete project, others can view it)

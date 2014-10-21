@@ -34,8 +34,8 @@
         <li>
           <a href="" {{action "logout"}}>Logout</a>
         </li>
-          {{#link-to 'user.show' currentUser.id href=false tagName='li'}}
-            {{#link-to 'user.show' currentUser.id}}Hello {{currentUser.name}} {{/link-to}}
+          {{#link-to 'me'  href=false tagName='li'}}
+            {{#link-to 'me'}}Hello {{currentUser.name}} {{/link-to}}
           {{/link-to}}
       {{/if}}
     </ul>

@@ -1,0 +1,9 @@
+<h1>My Profile</h1>
+
+<form role="form">
+  <div class="form-group">
+    <label for="me_name">Full Name</label>
+    {{input value=currentUser.name class="form-controll" id="me_name"}}
+  </div>
+  <button type="submit" class="btn btn-default" {{action "update"}}>Submit</button>
+</form>

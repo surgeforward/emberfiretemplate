@@ -10,7 +10,7 @@ export default Ember.ObjectController.extend({
       var self = this;
       this.get('model').save().then(function(){
         self.transitionTo('project.show', self.get('model'));
-      })
+      });
     }
   }
 });

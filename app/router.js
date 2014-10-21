@@ -12,12 +12,13 @@ Router.map(function() {
     this.route('edit', {path:'edit/:project_id'});
   });
   this.resource('user',function(){
-    this.route('show', {path:'show/:user_id'});
+    // this.route('show', {path:'show/:user_id'});
   });
   this.route('login');
   this.route('register');
   this.route('forgot');
   this.route('changePassword');
+  this.route('me');
 });
 
 export default Router;

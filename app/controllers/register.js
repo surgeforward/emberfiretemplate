@@ -20,6 +20,7 @@ export default Ember.ObjectController.extend({
                 }
                 self.store.find('user',authData.uid).then(function(user){
                   self.growl.info('User created successfully.');
+                  user.set('auth',authData);
                   self.set('currentUser',user);
                   self.transitionToRoute('application');
                 });

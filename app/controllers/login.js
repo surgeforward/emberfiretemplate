@@ -14,8 +14,14 @@ export default Ember.Controller.extend({
               self.firebase.child('users').child(authData.uid).set(authData);
             }
             self.store.find('user',authData.uid).then(function(user){
+              user.set('auth', authData);
               self.set('currentUser',user);
-              self.transitionToRoute('application');
+              if(authData.password.isTemporaryPassword){
+                self.transitionToRoute('changePassword');
+              }
+              else{
+                self.transitionToRoute('application');
+              }
             });
           });
         } else {

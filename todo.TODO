@@ -7,6 +7,7 @@
  ✔ delete project @done (14-10-17 12:42)
  ✔ update project @done (14-10-17 13:18)
  ✔ forgot password @done (14-10-17 13:31)
+ ☐ use ember-cli-sb-admin add-on
  ☐ change password
  ☐ redirect to password change if password is temporary
  ☐ projects page breaks if refrential integrity is broken i.e. users.projects array has an id to a non existing project record

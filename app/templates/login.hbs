@@ -1,17 +1,32 @@
-<form id="frmLogin" role="form">
-   <h2>Login</h2>
-    {{form-errors errors=errors}}
-
-   <div class="form-group">
-    <label for="txtEmail">Email address</label>
-    {{input value=model.email type="email" class="form-control" id="txtEmail" placeholder="Enter email" name="txtEmail"}}
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4">
+      <div class="login-panel panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Please Sign In</h3>
+        </div>
+        <div class="panel-body">
+          <form role="form">
+            <fieldset>
+              {{form-errors errors=errors}}
+              <div class="form-group">
+                {{input value=model.email type="email" class="form-control" placeholder="Enter email" autofocus=true}}
+              </div>
+              <div class="form-group">
+                {{input type='password' value=model.password class="form-control" placeholder="Password" }}
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input name="remember" type="checkbox" value="Remember Me">Remember Me
+                </label>
+              </div>
+              <!-- Change this to a button or input when using this as a form -->
+              <button type="submit" class="btn btn-lg btn-success btn-block" {{action "login"}}>Login</button>
+              {{#link-to 'forgot'}}Forgot password?{{/link-to}}
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-<div class="form-group">
-    <label for="txtPass">Password</label>
-    {{input type='password' value=model.password class="form-control" id="txtPass" placeholder="Password" name="txtPass"}}
-</div>
-<button type="submit" class="btn btn-default btn-block" {{action "login"}}>Login</button>
-
-</form>
-
-{{#link-to 'forgot'}}Forgot password?{{/link-to}}

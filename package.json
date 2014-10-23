@@ -32,6 +32,6 @@
   },
   "dependencies": {
     "emberfire": "~1.2.7",
-    "bricks-ui": "~0.2.4"
+    "sb-admin-2-cli": "^0.1.1"
   }
 }

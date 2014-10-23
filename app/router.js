@@ -19,6 +19,7 @@ Router.map(function() {
   this.route('forgot');
   this.route('changePassword');
   this.route('me');
+  this.route('template/buttons');
 });
 
 export default Router;

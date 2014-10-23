@@ -4,10 +4,6 @@
 		{
 			"folder_exclude_patterns":
 			[
-				"tmp",
-				"node_modules",
-				"dist",
-				"bower_components"
 			],
 			"follow_symlinks": true,
 			"path": "."

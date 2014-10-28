@@ -26,6 +26,9 @@ Router.map(function() {
   this.route('theme/wells-panels');
   this.route('theme/notifications');
   this.route('theme/typography');
+  this.route('theme/forms');
+  this.route('theme/tables');
+  this.route('theme/flot');
 });
 
 export default Router;

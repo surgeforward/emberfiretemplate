@@ -10,7 +10,6 @@ export default Ember.View.extend({
 
     // popover demo
     Ember.$("[data-toggle=popover]")
-        .popover()
+        .popover();
   }
 });
-

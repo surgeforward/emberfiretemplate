@@ -5,7 +5,6 @@
 			"folder_exclude_patterns":
 			[
 				"node_modules",
-				"bower_components",
 				"tmp"
 			],
 			"follow_symlinks": true,

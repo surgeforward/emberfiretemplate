@@ -1,5 +1,5 @@
 /* global require, module */
-
+var pickFiles = require('broccoli-static-compiler');
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 var app = new EmberApp();
@@ -17,4 +17,48 @@ var app = new EmberApp();
 // please specify an object with the list of modules as keys
 // along with the exports of each module as its value.
 
-module.exports = app.toTree();
+//sb-admin-2 stuff - begin
+//import css files
+
+app.import('bower_components/bootstrap/dist/css/bootstrap.min.css');
+app.import('bower_components/font-awesome/css/font-awesome.css');
+app.import('bower_components/sb-admin-v2/css/plugins/social-buttons/social-buttons.css');
+app.import('bower_components/sb-admin-v2/css/plugins/timeline/timeline.css');
+
+//comment this if you don't need dataTables
+app.import('bower_components/sb-admin-v2/css/plugins/dataTables/dataTables.bootstrap.css');
+
+//comment if you don't need flot charts
+
+
+app.import('bower_components/sb-admin-v2/css/sb-admin.css');
+
+//import javascript files
+app.import('bower_components/bootstrap/dist/js/bootstrap.min.js');
+app.import('bower_components/metisMenu/dist/jquery.metisMenu.js');
+
+//comment this if you don't need dataTables
+app.import('bower_components/DataTables/media/js/jquery.dataTables.js');
+app.import('bower_components/sb-admin-v2/js/plugins/dataTables/dataTables.bootstrap.js');
+
+//comment if you don't need flot charts
+app.import('bower_components/flot/jquery.flot.js');
+app.import('bower_components/flot.tooltip/js/jquery.flot.tooltip.min.js');
+app.import('bower_components/flot/jquery.flot.resize.js');
+app.import('bower_components/flot/jquery.flot.pie.js');
+app.import('bower_components/flot/jquery.flot.time.js');
+
+app.import('bower_components/sb-admin-v2/js/sb-admin.js');
+
+//import fonts into /fonts
+var fontAwesomeTree = pickFiles('bower_components/font-awesome/fonts', {
+        srcDir: '/',
+        files: ['**/*.*'],
+        destDir: '/fonts'
+      });
+//sb-admin-2 stuff - end
+
+module.exports = app.toTree(fontAwesomeTree);
+
+
+

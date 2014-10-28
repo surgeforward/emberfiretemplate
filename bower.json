@@ -10,5 +10,11 @@
     "ember-cli-test-loader": "rwjblue/ember-cli-test-loader#0.0.4",
     "ember-load-initializers": "stefanpenner/ember-load-initializers#0.0.2",
     "emberfire": "~1.2.7"
+  },
+  "resolutions": {
+    "jquery": ">= 1.7.0 < 2.2.0"
+  },
+  "devDependencies": {
+    "sb-admin-v2": "~0.1.0"
   }
 }

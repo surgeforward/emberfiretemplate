@@ -7,7 +7,7 @@ export default Ember.Component.extend({
   role:"navigation",
   style:"margin-bottom: 0",
   didInsertElement: function() {
-    $('#side-menu').metisMenu();
+    Ember.$('#side-menu').metisMenu();
   }.on('didInsertElement') ,
   actions:{
     logout:function(){

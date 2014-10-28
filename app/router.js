@@ -19,7 +19,13 @@ Router.map(function() {
   this.route('forgot');
   this.route('changePassword');
   this.route('me');
-  this.route('template/buttons');
+
+  //theme pages
+  this.route('theme/buttons');
+
+  this.route('theme/wells-panels');
+  this.route('theme/notifications');
+  this.route('theme/typography');
 });
 
 export default Router;

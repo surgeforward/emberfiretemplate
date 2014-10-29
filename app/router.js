@@ -21,15 +21,18 @@ Router.map(function() {
   this.route('me');
 
   //theme pages
-  this.route('theme/buttons');
+  this.resource('theme',function(){
+    this.route('buttons');
+    this.route('wells-panels');
+    this.route('notifications');
+    this.route('typography');
+    this.route('forms');
+    this.route('tables');
+    this.route('flot');
+    this.route('morris');
+    this.route('grid');
+  });
 
-  this.route('theme/wells-panels');
-  this.route('theme/notifications');
-  this.route('theme/typography');
-  this.route('theme/forms');
-  this.route('theme/tables');
-  this.route('theme/flot');
-  this.route('theme/morris');
 });
 
 export default Router;

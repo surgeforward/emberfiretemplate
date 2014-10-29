@@ -1,4 +1,4 @@
-import Ember from 'ember';
+import SecureRoute from './secure-route';
 
-export default Ember.Route.extend({
+export default SecureRoute.extend({
 });

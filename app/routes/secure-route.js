@@ -13,5 +13,6 @@ export default Ember.Route.extend({
         });
         return promise;
     }
+    this.transitionTo('login');
   }
 });

@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-
+  isLoggedIn:false,
   init:function(){
     console.log('ApplicationController.init');
     var self = this;
@@ -13,7 +13,6 @@ export default Ember.Controller.extend({
       } else {
         self.set('isLoggedIn',false);
         self.set('currentUser',null);
-        self.transitionToRoute('login');
         console.log('user is logged out');
       }
     });

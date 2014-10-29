@@ -18,22 +18,22 @@ var app = new EmberApp();
 // along with the exports of each module as its value.
 
 //sb-admin-2 stuff - begin
-//import css files
+//***** import css files
 
 app.import('bower_components/bootstrap/dist/css/bootstrap.min.css');
 app.import('bower_components/font-awesome/css/font-awesome.css');
 app.import('bower_components/sb-admin-v2/css/plugins/social-buttons/social-buttons.css');
 app.import('bower_components/sb-admin-v2/css/plugins/timeline/timeline.css');
 
+//comment if you don't need morris charts
+app.import('bower_components/morrisjs/morris.css');
+
 //comment this if you don't need dataTables
 app.import('bower_components/sb-admin-v2/css/plugins/dataTables/dataTables.bootstrap.css');
 
-//comment if you don't need flot charts
-
-
 app.import('bower_components/sb-admin-v2/css/sb-admin.css');
 
-//import javascript files
+//***** import javascript files
 app.import('bower_components/bootstrap/dist/js/bootstrap.min.js');
 app.import('bower_components/metisMenu/dist/jquery.metisMenu.js');
 
@@ -48,15 +48,22 @@ app.import('bower_components/flot/jquery.flot.resize.js');
 app.import('bower_components/flot/jquery.flot.pie.js');
 app.import('bower_components/flot/jquery.flot.time.js');
 
+//comment if you don't need morris charts
+app.import('vendor/raphael.js');
+app.import('bower_components/morrisjs/morris.js');
+
 app.import('bower_components/sb-admin-v2/js/sb-admin.js');
 
-//import fonts into /fonts
+//***** import fonts into /fonts
 var fontAwesomeTree = pickFiles('bower_components/font-awesome/fonts', {
         srcDir: '/',
         files: ['**/*.*'],
         destDir: '/fonts'
       });
 //sb-admin-2 stuff - end
+
+
+app.import('bower_components/moment/moment.js');
 
 module.exports = app.toTree(fontAwesomeTree);
 

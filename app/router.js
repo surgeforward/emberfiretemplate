@@ -29,6 +29,7 @@ Router.map(function() {
   this.route('theme/forms');
   this.route('theme/tables');
   this.route('theme/flot');
+  this.route('theme/morris');
 });
 
 export default Router;

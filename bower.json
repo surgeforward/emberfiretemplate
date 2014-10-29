@@ -15,6 +15,7 @@
     "jquery": ">= 1.7.0 < 2.2.0"
   },
   "devDependencies": {
-    "sb-admin-v2": "~0.1.0"
+    "sb-admin-v2": "~0.1.0",
+    "moment": "~2.8.3"
   }
 }

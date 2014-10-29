@@ -3,7 +3,9 @@
     "document": true,
     "window": true,
     "-Promise": true,
-    "EmberfiretemplateENV": true
+    "EmberfiretemplateENV": true,
+    "moment": true,
+    "Morris": true
   },
   "browser" : true,
   "boss" : true,

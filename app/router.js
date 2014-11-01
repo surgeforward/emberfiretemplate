@@ -31,6 +31,7 @@ Router.map(function() {
     this.route('flot');
     this.route('morris');
     this.route('grid');
+    this.route('dashboard');
   });
 
 });

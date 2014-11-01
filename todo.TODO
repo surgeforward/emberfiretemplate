@@ -7,9 +7,10 @@
  ✔ delete project @done (14-10-17 12:42)
  ✔ update project @done (14-10-17 13:18)
  ✔ forgot password @done (14-10-17 13:31)
- ☐ theme/dashboard
+ ✔ theme/dashboard @done (14-11-01 14:31)
+ ☐ signup link in navbar and signup view
  ☐ theme/blank
- ☐ theme/login
+ ✔ theme/login @done (14-11-01 14:32)
  ☐ pages without sidebar
  ☐ change password
  ☐ redirect to password change if password is temporary

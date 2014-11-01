@@ -6,6 +6,9 @@ export default Ember.Controller.extend({
     isLoggedIn: Ember.computed.alias('controllers.application.isLoggedIn'),
 
     projects: function(){
-        return this.get('currentUser').get('projects');
-    }.property(),
+        if (this.get('isLoggedIn')) {
+            return this.get('currentUser').get('projects');
+        };
+        return [];
+    }.property('currentUser', 'currentUser.projects', 'currentUser.projects.@each'),
 });

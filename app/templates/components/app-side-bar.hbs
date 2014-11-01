@@ -16,15 +16,17 @@
     <li>
         {{#link-to 'theme.dashboard'}}<i class="fa fa-dashboard fa-fw"></i> Theme Demo{{/link-to}}
     </li>
+    {{#if isLoggedIn}}
+        <li>
+            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Projects<span class="fa arrow"></span></a>
+            <ul class="nav nav-second-level collapse in">
+                {{#each project in projects}}
+                    <li>
+                        {{#link-to 'project.show' project.id}}{{project.name}}{{/link-to}}
+                    </li>
+                {{/each}}
+            </ul>
+        </li>
+    {{/if}}
 
-    <li>
-        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Projects<span class="fa arrow"></span></a>
-        <ul class="nav nav-second-level collapse in">
-            {{#each project in projects}}
-                <li>
-                    {{#link-to 'project.show' project.id}}{{project.name}}{{/link-to}}
-                </li>
-            {{/each}}
-        </ul>
-    </li>
 {{/side-bar}}

@@ -11,14 +11,7 @@
 
     <div class="row">
         <div class="col-lg-12">
-            <ul>
-              {{#each project in projects}}
-                <li>
-                  {{#link-to 'project.show' project.id}}{{project.name}}{{/link-to}}
-                </li>
-              {{/each}}
-
-            </ul>
+            {{outlet}}
         </div>
         <!-- /.col-lg-12 -->
     </div>

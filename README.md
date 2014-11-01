@@ -1,6 +1,6 @@
 # Ember Fire Template
 
-This is a template to get you started with ember and firebase quickly.
+This is a template to get you started with ember and firebase quickly using the very cool theme [SB Admin 2](http://ironsummitmedia.github.io/startbootstrap-sb-admin-2/).
 
 # Features
 
@@ -14,6 +14,9 @@ This is a template to get you started with ember and firebase quickly.
 * `git clone` this repository
 * `npm install`
 * `bower install`
+
+## Tweaking Theme
+If you don't want to use SB Admin 2 theme, edit Brocfile.js and remove the lines that you don't need.  You can also remove the dependency from the bower.json file.
 
 ## Rules
 Here are the rules that you need to set in your firebase application.  To learn more about rules see [https://www.firebase.com/docs/security/](https://www.firebase.com/docs/security/)

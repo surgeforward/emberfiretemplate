@@ -1,0 +1,30 @@
+{{#side-bar}}
+    <li class="sidebar-search">
+        <div class="input-group custom-search-form">
+            <input type="text" class="form-control" placeholder="Search...">
+            <span class="input-group-btn">
+            <button class="btn btn-default" type="button">
+                <i class="fa fa-search"></i>
+            </button>
+        </span>
+        </div>
+        <!-- /input-group -->
+    </li>
+    <li>
+        {{#link-to 'index'}}<i class="fa fa-home fa-fw"></i> Home{{/link-to}}
+    </li>
+    <li>
+        {{#link-to 'theme.dashboard'}}<i class="fa fa-dashboard fa-fw"></i> Theme Demo{{/link-to}}
+    </li>
+
+    <li>
+        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Projects<span class="fa arrow"></span></a>
+        <ul class="nav nav-second-level collapse in">
+            {{#each project in projects}}
+                <li>
+                    {{#link-to 'project.show' project.id}}{{project.name}}{{/link-to}}
+                </li>
+            {{/each}}
+        </ul>
+    </li>
+{{/side-bar}}

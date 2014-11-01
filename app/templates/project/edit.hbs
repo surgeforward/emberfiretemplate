@@ -1,7 +1,18 @@
-<h1>Edit: {{name}}</h1>
-<div>
-  {{input value=name}}
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Edit: {{name}}</h1>
+    </div>
 </div>
 
-<button class='btn btn-default' {{action "cancel"}}>Cancel</button>
-<button class='btn btn-primary' {{action "save"}}>Save</button>
+<div class="row">
+    <div class="col-lg-12">
+        <div>
+          {{input value=name}}
+      </div>
+
+      <button class='btn btn-default' {{action "cancel"}}>Cancel</button>
+      <button class='btn btn-primary' {{action "save"}}>Save</button>
+
+  </div>
+</div>
+

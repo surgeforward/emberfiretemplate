@@ -34,7 +34,23 @@ Here are the rules that you need to set in your firebase application.  To learn 
       ".read" : "auth.uid !=null",
       "$project":{
         ".read": "data.child('user').val() === auth.uid",
-        ".write": "newData.child('user').val() === auth.uid"
+        ".write": "(newData.child('user').val() === auth.uid) ||(data.child('user').val() === auth.uid)"
+      }
+    },
+
+    "tasks": {
+      ".read" : "auth.uid !=null",
+      "$task":{
+        ".read": "root.child('projects')
+                    .child(data.child('project').val())
+                    .child('user').val() === auth.uid",
+        ".write": "(!data.exists() && root.child('projects')
+                    .child(newData.child('project').val())
+                    .child('user').val() === auth.uid) ||
+                   (data.exists() &&
+                    (root.child('projects')
+                      .child(data.child('project').val())
+                      .child('user').val() === auth.uid))"
       }
     }
   }
@@ -63,5 +79,9 @@ Here are the rules that you need to set in your firebase application.  To learn 
   * type `dist` for your public folder
 * `firebase deploy`
 * `firebase open` (to see it in the browser)
+
+## Add new model
+* `ember g model task`
+* to be continued...
 
 For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).

@@ -11,10 +11,8 @@ export default Ember.ArrayController.extend({
       project.destroyRecord().then(function(){
         console.log('record deleted');
         var projects = self.get('projects');
-        // self.get('currentUser').get('projects').then(function(projects){
           projects.removeObject(project);
           self.get('currentUser').save(); //delete relationship
-        // });
 
       }).catch(function(error){
         console.log('Error deleting: ' + error);

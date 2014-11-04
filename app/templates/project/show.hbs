@@ -1,13 +1,29 @@
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Project: {{name}}</h1>
+            <h1 class="page-header">{{model.name}} {{#link-to 'project.edit' this class="btn btn-xs btn-link"}}Edit{{/link-to}}</h1>
         </div>
     </div>
 
     <div class="row">
         <div class="col-lg-12">
-            <h2>Project children go here</h2>
-         {{#link-to 'project.edit' this}}Edit{{/link-to}}
+            <h2>Tasks</h2>
+            <form {{action "addTodo" on="submit"}}>
+                {{input value=todo}}
+                <button type='submit' >Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <hr>
+    <div class="row">
+        <div class="col-lg-12">
+            <ul>
+                {{#each tasks itemController="task"}}
+                    {{#with this}}
+                        <li> {{view Ember.Checkbox checked=model.done}} {{input value=model.todo}} <a href="#" {{action "deleteTodo" this}}>delete</a> </li>
+                    {{/with}}
+                {{/each}}
+            </ul>
         </div>
     </div>
 

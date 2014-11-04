@@ -8,7 +8,6 @@ export default Ember.Component.extend({
   style:"margin-bottom: 0",
   actions:{
     logout:function(){
-        console.log('222222222 nav bar');
       this.sendAction('logout');
     }
   }

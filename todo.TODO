@@ -11,13 +11,13 @@
  ✔ home page after login @done (14-11-01 17:19)
  ✔ signup link in navbar and signup view @done (14-11-01 17:33)
  ✔ change password @done (14-11-03 12:36)
- ☐ update sb-admin and move into vendor folder instead of bower package
  ✔ get rid of isLoggedIn @done (14-11-04 09:46)
- ☐ add tasks i.e. project children
+ ✔ theme/login @done (14-11-01 14:32)
+ ✔ add tasks i.e. project children @done (14-11-04 13:25)
+ ☐ invite others to use project (only owner can edit or delete project, others can view it)
+ ☐ update sb-admin and move into vendor folder instead of bower package
  ☐ delete project
  ☐ theme/blank
- ✔ theme/login @done (14-11-01 14:32)
  ☐ pages without sidebar
  ☐ redirect to password change if password is temporary
  ☐ projects page breaks if refrential integrity is broken i.e. users.projects array has an id to a non existing project record
- ☐ invite others to use project (only owner can edit or delete project, others can view it)

@@ -5,7 +5,7 @@ export default Ember.Route.extend({
     var self = this;
     var auth = this.firebase.getAuth();
     var currentUser = self.controllerFor('application').get('currentUser');
-    if (currentUser) {return;};
+    if (currentUser) {return;}
     if(auth && auth.uid){
         var promise = this.store.find('user',auth.uid);
         promise.then(function(user){

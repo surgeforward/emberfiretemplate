@@ -7,6 +7,12 @@ export default Ember.Controller.extend({
       }
       return [];
   }.property('currentUser', 'currentUser.projects', 'currentUser.projects.@each'),
+  tasks: function(){
+      if (this.get('currentUser')) {
+          return this.get('currentUser').get('tasks');
+      }
+      return [];
+  }.property('currentUser', 'currentUser.tasks', 'currentUser.tasks.@each'),
   init:function(){
     console.log('ApplicationController.init');
     var self = this;

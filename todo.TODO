@@ -10,7 +10,10 @@
  ✔ theme/dashboard @done (14-11-01 14:31)
  ✔ home page after login @done (14-11-01 17:19)
  ✔ signup link in navbar and signup view @done (14-11-01 17:33)
- ☐ change password
+ ✔ change password @done (14-11-03 12:36)
+ ☐ update sb-admin and move into vendor folder instead of bower package
+ ✔ get rid of isLoggedIn @done (14-11-04 09:46)
+ ☐ add tasks i.e. project children
  ☐ delete project
  ☐ theme/blank
  ✔ theme/login @done (14-11-01 14:32)

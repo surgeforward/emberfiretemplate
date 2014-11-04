@@ -1,7 +1,8 @@
-<h1>Projects</h1>
-
-<ul>
+{{#nav-bar currentUser=currentUser logout='logout'}}
+    {{app-side-bar projects=projects currentUser=currentUser}}
+{{/nav-bar}}
+<div id="page-wrapper">
   {{#each item in model}}
     <li>{{#link-to 'project.show' item}}{{item.name}}{{/link-to}} <button class='btn btn-danger btn-xs' {{action "deleteProject" item}}>delete</button> </li>
   {{/each}}
-</ul>
+</div>

@@ -5,5 +5,11 @@ export default Ember.Component.extend({
   classNames: ['navbar', 'navbar-default', 'navbar-fixed-top'],
   attributeBindings: ['role','style'],
   role:"navigation",
-  style:"margin-bottom: 0"
+  style:"margin-bottom: 0",
+  actions:{
+    logout:function(){
+        console.log('222222222 nav bar');
+      this.sendAction('logout');
+    }
+  }
 });

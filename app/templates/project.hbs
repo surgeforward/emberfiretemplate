@@ -1,8 +1,6 @@
-{{#nav-bar isLoggedIn=isLoggedIn currentUser=currentUser}}
-    {{app-side-bar projects=projects isLoggedIn=isLoggedIn}}
+{{#nav-bar currentUser=currentUser logout='logout'}}
+    {{app-side-bar projects=projects currentUser=currentUser}}
 {{/nav-bar}}
 <div id="page-wrapper">
     {{outlet}}
-
-
 </div>

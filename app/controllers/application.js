@@ -1,7 +1,12 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  isLoggedIn:false,
+  projects: function(){
+      if (this.get('currentUser')) {
+          return this.get('currentUser').get('projects');
+      }
+      return [];
+  }.property('currentUser', 'currentUser.projects', 'currentUser.projects.@each'),
   init:function(){
     console.log('ApplicationController.init');
     var self = this;
@@ -9,12 +14,10 @@ export default Ember.Controller.extend({
     this.firebase.onAuth(function(authData) {
       if (authData) {
         console.log("User ID: " + authData.uid + ", Provider: " + authData.provider);
-        self.set('isLoggedIn',true);
       } else {
-        self.set('isLoggedIn',false);
         self.set('currentUser',null);
         console.log('user is logged out');
       }
     });
-  },
+  }
 });

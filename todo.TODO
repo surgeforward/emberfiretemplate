@@ -21,3 +21,5 @@
  ☐ pages without sidebar
  ☐ redirect to password change if password is temporary
  ☐ projects page breaks if refrential integrity is broken i.e. users.projects array has an id to a non existing project record
+ ☐ add growl
+ ☐ should i get rid of computed projects property since I can get to it with currentUser.get('projects')

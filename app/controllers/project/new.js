@@ -9,6 +9,15 @@ export default Ember.ObjectController.extend({
       var self = this;
       var newProject = this.get('model');
       var projects = this.get('projects');
+      var currentUser = this.get('currentUser');
+
+      // var member = this.store.createRecord('member',{
+      //   id: currentUser.get('id'),
+      //   role: 'XXX'
+      // })
+      // newProject.get('members').addObject(member);
+      newProject.addMember(currentUser, 'owner');
+
       newProject.save().then(function(){
         console.log('Save success');
         projects.addObject(newProject);
